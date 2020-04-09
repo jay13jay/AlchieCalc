@@ -19,11 +19,14 @@ def check_args():
  
   elif len(sys.argv) == 3:
     print("2 args provided, attempting to calulate alcohol content...\n")
-    sys.argv[1] = drink_abv
-    sys.argv[2] = drink_volume
+    sys.argv[1] = abv
+    sys.argv[2] = volume
 
   elif len(sys.argv) == 4:
     print("3 args provided, attempting to calulate price...\n")
+    sys.argv[1] = abv
+    sys.argv[2] = volume
+    sys.argv[3] = price
 
   else:
     print("unsupported number of arguments provided")
