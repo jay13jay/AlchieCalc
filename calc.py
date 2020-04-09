@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import sys
 
+
 # Help Text
 def print_help():
   print("\tProgram Usage:")
@@ -16,40 +17,46 @@ def check_args():
     print("Too few arguments provided...\n\n")
     print_help()
     sys.exit(1)
- 
   elif len(sys.argv) == 3:
     print("2 args provided, attempting to calulate alcohol content...\n")
-    abv = sys.argv[1]
-    volume = sys.argv[2]
-    get_alc_content(abv,volume)
-
+    return(3)
   elif len(sys.argv) == 4:
     print("3 args provided, attempting to calulate price...\n")
-    abv = sys.argv[1]
-    volume = sys.argv[2]
-    price = sys.argv[3]
-    get_price(abv,volume,price)
-
+    return(4)
   else:
     print("unsupported number of arguments provided")
     sys.exit(1)
 
 
-def get_alc_content(percentage,volume):
-  print("unfinished method: will calculate total alcohol content")
 
+def get_alc_content(percentage,volume):
+  print("%s%% * %s" % (percentage,volume))
+  percentage = percentage/100
+  total = percentage*volume
+  # print("total alcohol in drink is: %s" % (total))
+  return(total)
 
 def get_price(percentage,volume,price):
-  print("unfinished method: will calculate price per unit of alcohol")
-
-
+  total = get_alc_content(percentage,volume)
+  cost = total/price
+  print("Price per unit:\t", cost)
 
 
 def main():
   # main program logic
-
   # Check if at least 2 args provided
-  check_args()
+  ret = check_args()
+  if ret == 3:
+    abv = float(sys.argv[1]) * 1
+    volume = int(sys.argv[2])
+    amount = get_alc_content(abv,volume)
+    print("Total alcohol in beverage: ", amount)
+  if ret == 4:
+    abv = float(sys.argv[1]) * 1
+    volume = int(sys.argv[2])
+    price = float(sys.argv[3])
+    get_price(abv,volume,price)
+
 
 if __name__ == '__main__':
   main()
