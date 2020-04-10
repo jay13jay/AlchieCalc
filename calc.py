@@ -39,7 +39,7 @@ def get_alc_content(percentage,volume):
 def get_price(percentage,volume,price):
   total = get_alc_content(percentage,volume)
   cost = total/price
-  print("Price per unit:\t", cost)
+  print("Price per unit:\t", '${:,.2f}'.format(cost))
 
 
 def main():
