@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  <body>
     
-      <nav class="navbar navbar-default navbar-static-top">
+      <nav class="navbar navbar-default navbar-static-top" style="background-color: black;">
       <div class="container">
         <ul class="nav navbar-nav">
           <li><a class="navbar-brand" href="/">Alchie Calc</a></li>
@@ -69,6 +69,23 @@
 
       </div>
     </div>
+
+    <footer class="page-footer font-small pt-4" style="background-color: black;">
+
+      <!-- Footer Links -->
+      <div class="container-fluid text-center text-md-left">
+        <!-- Any footer text above copyright-->
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="https://www.facebook.com/jhaxtech"> JHAX, LLC</a>
+      </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+    
 
     <script language="javascript">
       function addNumbers()
