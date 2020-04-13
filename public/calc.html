@@ -15,7 +15,7 @@
       <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <ul class="nav navbar-nav">
-          <li><a class="navbar-brand" href="/calc.html">Alchie Calc</a></li>
+          <li><a class="navbar-brand" href="/">Alchie Calc</a></li>
         </ul>
       </div>
     </nav>
@@ -28,9 +28,10 @@
           <div class="form-group">
             <label for="unitType">Please select unit to use</label>
             <select class="form-control" id="unitType">
-              <option>Ounces</option>
-              <option>Milli Liters</option>
-              <option>Liters</option>
+              <option>Ounce</option>
+              <option>Milliliter</option>
+              <option>Liter</option>
+              <!-- <option>US Shot</option> -->
             </select>
           </div>
 
@@ -41,7 +42,7 @@
 
           <div class="form-group">
             <label for="VolumeInput">Enter volume of beverage</label>
-            <input type="number" class="form-control" id="VolumeInput" rows="1"></textarea>
+            <input type="number" min ="0" step="0.01" class="form-control" id="VolumeInput" rows="1"></textarea>
           </div>
 
           <div class="form-group">
@@ -91,11 +92,12 @@
       }
 
       function getPrice(units, price) {
-        ansD = units / price
+        // ansD = units / price
+        ansD = price / units
         // window.alert("units: " + units + "\nprice: " + price + "\nansD: " + ansD)
         return(ansD)
 
       }
-</script>
+    </script>
   </body>
 </html>
